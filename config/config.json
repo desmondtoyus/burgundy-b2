@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "desmondtoye",
-    "password": "#Aaa050789",
-    "database": "burgundy",
-    "host": "127.0.0.1",
+    "username": "u5jzg21u7ev8b08u",
+    "password": "drjte11aaxlnlflc",
+    "database": "npx6ixnxp6nb4mpb",
+    "host": "qbct6vwi8q648mrn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "desmondtoye",
-    "password": "#Aaa050789",
-    "database": "burgundy",
-    "host": "127.0.0.1",
+    "username": "u5jzg21u7ev8b08u",
+    "password": "drjte11aaxlnlflc",
+    "database": "npx6ixnxp6nb4mpb",
+    "host": "qbct6vwi8q648mrn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "production": {
-    "username": "desmondtoye",
-    "password": "#Aaa050789",
-    "database": "burgundy",
-    "host": "127.0.0.1",
+    "username": "u5jzg21u7ev8b08u",
+    "password": "drjte11aaxlnlflc",
+    "database": "npx6ixnxp6nb4mpb",
+    "host": "qbct6vwi8q648mrn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
