@@ -1,10 +1,4 @@
-#post-by-user, #panel-contain{
-  height: auto;
-}
 
-.message-div, .aMessage, .summary{
-  width: 100%;
-}
 
 #flipkart-navbar {
   background-color: #edd9c0;
@@ -349,8 +343,7 @@ body {
 }
 .table-filter {
 	background-color: #fff;
-  border-bottom: 1px solid #eee;
-  width: auto;
+	border-bottom: 1px solid #eee;
 }
 .table-filter tbody tr:hover {
 	cursor: pointer;
@@ -425,7 +418,7 @@ body {
 	width: 35px;
 }
 .table-filter .media-body {
-    
+    display: block;
     /* Had to use this style to force the div to expand (wasn't necessary with my bootstrap version 3.3.6) */
 }
 .table-filter .media-meta {
@@ -1002,3 +995,63 @@ a:focus, a:hover {
   padding: 13px;
   line-height: 1;
  }
+
+ .panel-info>.panel-heading {
+  color: #7d4627;
+  background-color: #edd9c0;
+  border-color: #edd9c0;
+}
+
+.panel-body {
+  height: 100%;
+
+}
+
+.panel-default {
+  margin-top: 10px;
+}
+
+#addProduct {
+  color: #fff;
+  background-color: #7d4627;
+  border-color: #7d4627;
+  width: 200px;
+  height: 40px;
+
+}
+
+#addProduct:hover {
+  color: #dd8830;
+  background-color: #7d4627;
+  border-color: #7d4627;
+  width: 200px;
+  height: 40px;
+
+}
+
+button, input, optgroup, select, textarea {
+  margin-bottom: 20px;
+  font-family:Roboto;
+  color: #fff;
+  background-color: white;
+
+}
+
+#upload {
+  color: #fff;
+  background-color: #7d4627;
+  border-color: #7d4627;
+  width: 200px;
+  height: 40px;
+}
+
+.badge {
+  color: #fff;
+  background-color: #7d4627;
+  border-color: #7d4627;
+
+}
+
+.label-success {
+  background-color: #7d4627;
+}
