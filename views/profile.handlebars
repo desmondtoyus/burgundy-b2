@@ -1,0 +1,374 @@
+<script>
+    window.onload = function () {
+        document.getElementById('uploadForm').action = '/upload/' + sessionStorage.userId;
+    }
+
+</script>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-3">
+
+
+            <div class="well">
+                <div class="card hovercard">
+                    {{!-- <div class="cardheader">
+
+                    </div> --}}
+                    <div class="avatar">
+                        <img alt="" id='userimage' src="" style= "margin-top: 25%">
+
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <div id="username"></div>
+
+                        </div>
+                        <div class="desc">User short description.</div>
+                    </div>
+                    <div class="bottom">
+                        <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                        <a class="btn btn-danger btn-sm" rel="publisher" href="https://plus.google.com/+ahmshahnuralam">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                        <a class="btn btn-primary btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                        <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
+                                            <i class="fa fa-behance"></i>
+                                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <ul class="nav nav-pills nav-stacked admin-menu">
+                <li class="active"><a id="home1" href="" data-target-id="home"><i class="glyphicon glyphicon-user"></i> Home</a></li>
+                <li><a id="profile1" href="" data-target-id="profile"><i class="glyphicon glyphicon-user profile-link"></i> Profile</a></li>
+                <li><a id="message1" href="" data-target-id="message"><i class="glyphicon glyphicon-user profile-link"></i> Messages</a></li>
+                <li><a id="add-product1" href="" data-target-id="add-product"><i class="glyphicon glyphicon-plus profile-link"></i> Add Item</a></li>
+                <li><a id="settings1" href="" data-target-id="settings"><i class="glyphicon glyphicon-cog profile-link"></i> Settings</a></li>
+                <li><a id="logout1" href="" data-target-id="logout"><i class="glyphicon glyphicon-log-out profile-link"></i> Logout</a></li>
+            </ul>
+        </div>
+        <div class="col-md-9  admin-content" id="home">
+
+        </div>
+
+
+
+        <div id="item-search">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6  col-md-5 col-sm-12" style="padding-top: 30px;">
+                        <p class="lead" id="title"> </p>
+                        <p id="short_desc"></p>
+                        <p id="item_category"></p>
+                        <p id="location"></p>
+                        <p id="user_want"></p>
+                        <p id="still_available"></p>
+
+                        <div class="image-block">
+                            <img src="" class="img-responsive" id="item-img">
+                        </div>
+                        <div class="well ">
+                            <large id="description"></large>
+                        </div>
+                    </div>
+                    <div class="col-lg-3  col-md-3 col-sm-12" style="padding-top: 30px;">
+                       
+
+                        <div class="well">
+                            <div class="card hovercard">
+                                <div class="cardheader">
+
+                                </div>
+                                <div class="avatar">
+                                    <img alt="" id='userimage' src="">
+
+                                </div>
+                                <div class="info">
+                                    <div class="title">
+                                        <div id="username">
+                                            dsfjhdsfjhdfjh
+                                        </div>
+
+                                    </div>
+                                    <div class="desc"><img src="" id="poster-img"></div>
+                                    
+                                </div>
+                                 <div class="well">
+                            <!-- <h2>Subscription Box</h2> -->
+                            <p>Interested in this?</p>
+                            <a class="cart-button" id="chat-button"> Chat With This User</a>
+
+
+                        </div>
+                                <div class="bottom">
+                                   
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="search_error">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h3 class="text-center">
+                                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Sorry
+                                <small> We do not have any items matching your search!<b></b></small>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>Please try the following:</p>
+
+                            <ul class="list-group">
+                                <li class="list-group-item">Make sure that the item displayed in the textbox is spelled and formatted correctly.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="col-md-9  admin-content" id="profile">
+            <div class="panel panel-info" style="margin: 1em;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">My Post</h3>
+                </div>
+                <div class="panel-body" id="post-by-user">
+                   
+                 
+                </div>
+            </div>
+            <div class="panel panel-info" style="margin: 1em;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Requests</h3>
+                </div>
+                <div class="panel-body">
+                    /post user is Interested in
+                </div>
+            </div>
+            <div class="panel panel-info" style="margin: 1em;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Last Password Change</h3>
+
+                </div>
+                <div class="panel-body">
+                    4 days Ago
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-9  admin-content" id="settings">
+            <div class="panel panel-info" style="margin: 1em;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Notification</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="label label-success">allowed</div>
+                </div>
+            </div>
+            <div class="panel panel-info" style="margin: 1em;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Edit Picture</h3>
+
+                </div>
+                <div class="panel-body">
+                    <form ref='uploadForm' id='uploadForm' method='post' encType="multipart/form-data">
+                        <input type="file" name="sampleFile" />
+
+
+                        <input type='submit' value='Upload!' class="btn btn-primary" id="upload" />
+                    </form>
+                </div>
+            </div>
+            <div class="panel panel-info" style="margin: 1em;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Newsletter</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="badge">Monthly</div>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div class="col-md-9  admin-content" id="message">
+            <div class="container">
+                <div class="row">
+
+                    <section class="content">
+
+                        <div class="col-md-8">
+                            <div class="panel panel-default">
+                                <div class="panel-body" >
+                                    <div class="pull-right">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-success btn-filter" data-target="pagado">Inbox</button>
+                                            <button type="button" class="btn btn-warning btn-filter" data-target="pendiente">Sent</button>
+                                            <button type="button" class="btn btn-danger btn-filter" data-target="cancelado">Draft</button>
+                                            <button type="button" class="btn btn-default btn-filter" data-target="all">Saved</button>
+                                        </div>
+                                    </div>
+                                    <div class="table-container">
+                                        <table class="table table-filter">
+                                            <tbody id="msg-row" >
+                                                
+
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-footer">
+
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9  admin-content" id="add-product">
+            <form action="/password" method="post">
+                <div class="container">
+                    <div class="row">
+                        <div class="container">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h1>Add Product</h1>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <form role="form">
+
+                                        <select class="form-control" id="productSelect"><option>Please Select a Product Group</option>
+      <option>Music & Media</option>
+      <option>Art & Design</option>
+      <option>Home & Food</option>
+      <option>Wellness & Fitness</option>
+      <option>Business</option>
+      <option>Beauty</option>
+    </select>
+                                        <br>
+                                        <div class="form-group">
+                                            <label for="productname" class="loginFormElement">Product Title</label>
+                                            <input class="form-control" id="productname" type="email">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="userwant" class="loginFormElement">Swap For:</label>
+                                            <input class="form-control" id="userwant" type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="location" class="loginFormElement">Location:</label>
+                                            <input class="form-control" id="myloc" type="text"  onFocus="geolocate()">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="short_desc" class="loginFormElement">Short Description:</label>
+                                            <input class="form-control" id="shortdesc1" type="text">
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label class="loginformelement" for="productdescription">Product Description</label>
+                                            <input id="productdescription" class="form-control input-lg" placeholder="Large" type="text">
+                                            <div class="container">
+                                            </div>
+                                            <br>
+
+                                            <button type="submit" id="addProduct" class="btn btn-success loginFormElement">Add Product</button>
+
+                                        </div>
+                                    </form>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                {{!--
+                <div class="col-md-9  admin-content" id="settings"></div> --}}
+
+                <div class="col-md-9  admin-content" id="logout">
+                    <div class="panel panel-info" style="margin: 1em;">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Confirm Logout</h3>
+                        </div>
+                        <div class="panel-body">
+                            Do you really want to logout ?
+                            <a href="#" class="label label-danger" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            <span >   Yes   </span>
+                        </a>
+                            <a href="/account" class="label label-success"> <span >  No   </span></a>
+                        </div>
+                        <form id="logout-form" action="#" method="POST" style="display: none;">
+                        </form>
+
+
+
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<script src="./js/searchplace.js">
+      
+    </script>
+      
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlgo-NoEnJVpM1q4BN_h5wdc6F8Xw-dLw&libraries=places&callback=initAutocomplete"
+        async defer></script>
+
+<script type="text/javascript " src="./js/profile.js ">
+
+</script>
+
+<script type="text/javascript " src="./js/view.js ">
+
+</script>
+
+<script type="text/javascript " src="./js/chat.js ">
+
+</script>

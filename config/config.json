@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "desmondtoye",
+    "password": "#Aaa050789",
+    "database": "burgundy",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "desmondtoye",
+    "password": "#Aaa050789",
+    "database": "burgundy",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "desmondtoye",
+    "password": "#Aaa050789",
+    "database": "burgundy",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
